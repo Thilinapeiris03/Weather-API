@@ -55,4 +55,4 @@ input[type="checkbox"]:checked ~ .check::before{
 
 input[type="checkbox"]:checked ~ .check::after{
     transform: translateX(0px);
-} */ */
+}  */
