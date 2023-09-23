@@ -1,0 +1,33 @@
+/* Rectangle 15 */
+
+position: absolute;
+width: 648px;
+height: 327px;
+left: 31.5px;
+top: 219.5px;
+
+background: rgba(116, 137, 188, 0.93);
+mix-blend-mode: normal;
+opacity: 0.4;
+border-radius: 30px;
+
+
+
+
+/* Panadura */
+
+position: absolute;
+width: 144px;
+height: 39px;
+left: 136px;
+top: 263px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+color: rgba(255, 255, 255, 0.8);
+
