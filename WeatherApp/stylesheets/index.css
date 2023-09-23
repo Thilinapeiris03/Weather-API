@@ -3,10 +3,6 @@ body{
     
 }
 
-.body-img-trans{
-    /* background-image: url(/assets/blue-sky-with-cloud-closeup.jpg); */
-    opacity: 5;
-}
 
 .div-search{
     position: relative;
@@ -321,15 +317,157 @@ hr{
 }
 
 .day7-pastdata-heading{
-    width: 80vw;
-    height: 20vw;
-    background-color: aqua;
-    margin-left: 5vw;
-    
+    width: 90vw;
+    height: 2.5vw;
+    background-color: rgba(217, 217, 217, 0.3);
+    margin-left: 6vw;
+    margin-right: 6vw;
+    border-radius: 1vw;
+    text-align: center;
+}
 
+.lbl-day7-pastdata-heading{
+    color: #fff;
+    font-size: 1.5vw;
+    
 }
 
 
 .day7-pastdata-details{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #fff; */
+    margin-top: 1vw;
+    margin-left: 6vw;
+    margin-right: 3vw;
+    color: #fff;
+}
 
+
+.div-previous-weather{
+    background-color: rgba(17, 16, 16, 0.249);
+    height: 15vw;
+    width: 10vw;
+    border-radius: 2vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    
+}
+
+
+
+.div-day7-pastdata-detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.day7-pastdata-lbldate{
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+
+.day7-pastdata-img{
+    margin-left: 2.5vw;
+    margin-top: 0.5vw;
+    height: 5vw;
+    width: 5vw;
+}
+
+.day7-pastdata-img-img{
+    height: 5vw;
+    width: 5vw;
+
+}
+
+.lbl-day7-pastdata-temp{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+.lbl-day7-pastdata-condition{
+    text-align: center;
+    color: #fff;
+    font-size: 2vw;
+}
+
+
+
+/* Pricing div CSS */
+
+.div-pricing{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-pricing-heading{
+    color: #fff;
+    font-size: 2.5vw;
+    margin-left: 36vw;
+    margin-right: 36vw;
+    margin-top: 2vw;
+
+}
+
+.div-pricing-plans{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.pricing-plan{
+    height: 28vw;
+    width: 20vw;
+    background: #292424;
+    color: #fff;
+    border-radius: 20px;
+    margin-left: 10vw;
+}
+
+.pricing-icon-img{
+    height: 1.5vw;
+}
+
+.div-pricing-details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    font-size: 1vw;
+    text-align: left;
+}
+
+.pricing-btn{
+    margin-top: 2vw;
+    width: 8vw;
+    border-radius: 2vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    background: #D9D9D9;
+}
+
+.pricing-plan-name{
+    font-size: 2.5vw;
+    width: 20vw;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.pricing-plan-name-detail{
+    font-size: 1vw;
+    /* background-color: aqua; */
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.pricing-plan-fee{
+    font-size: 2vw;
+    text-align: center;
+    width: 20vw;
+    margin-bottom: 1vw;
+}
+.class-fee-month{
+    font-size: 1vw;
 }
