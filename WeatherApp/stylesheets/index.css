@@ -1,7 +1,23 @@
 body{
-    background-image: url(/assets/brandon-morgan-3qucB7U2l7I-unsplash.jpg);
+    background-image: url(/assets/darkmode.jpg);
     
 }
+
+.lbl-theme{
+    background-color: #ECD8D8;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 2vw;
+}
+
+.modechanger-img{
+    width: 3vw;
+    height: 3vw;
+}
+/* .lbl-theme img{
+    width: 3vw;
+    height: 3vw;
+} */
 
 .div-search{
     position: relative;
@@ -313,7 +329,7 @@ hr{
 
 
 .div-previous-weather{
-    background-color: rgba(17, 16, 16, 0.249);
+    background-color: rgba(17, 16, 16, 0.31);
     height: 15vw;
     width: 10vw;
     border-radius: 2vw;
@@ -415,15 +431,15 @@ hr{
 table{
     margin-left: 2vw;
     font-weight: 500;
-    border-radius: ;
+    border-radius: 2vw;
+    font-size: 1vw;
 }
 
 td{
     width: 20vw;
     text-align: left;
     padding: 0.5vw;
-    /* background-color: #ECD8D8; */
-}
+    }
 
 /* Pricing div CSS */
 

@@ -31,3 +31,56 @@ function refreshTime() {
 }
   setInterval(refreshTime, 1000);
 
+
+
+
+
+let themeImg =document.getElementById("theme-mode-img");
+let modeSelector=0;
+
+
+lightModeChanger();
+
+function lightModeChanger(){
+  themeImg.addEventListener("click",()=>{
+    if(modeSelector%2==0){
+      themeImg.src="/assets/icons/brightness.png"; 
+      modeSelector++;
+      themeChanger();
+    }else{
+      themeImg.src="/assets/icons/night-mode.png";
+      modeSelector++;
+      themeChanger();
+    }
+    
+    
+  })
+}
+
+let currentLocation = document.getElementById("current-location");
+let divAirCondition = document.getElementById("div-aircondition");
+let div3dayForecast = document.getElementById("div-3dayforecast");
+let divPreviousWeather = document.getElementById("div-previous-weather");
+let divPastdataHead = document.getElementById("day7-pastdata-heading");
+
+
+function themeChanger(){
+  if(modeSelector%2==0){
+    document.body.style.backgroundImage = "url('/assets/lightmode.jpg')";
+    currentLocation.style.backgroundColor = "#34495e";
+    divAirCondition.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+    div3dayForecast.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+    divPreviousWeather.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+    divPastdataHead.style.backgroundColor = "rgba(38, 10, 10, 0.499)";
+  }else{
+    document.body.style.backgroundImage = "url('/assets/darkmode.jpg')";
+    currentLocation.style.backgroundColor = "rgba(2, 6, 37, 0.452)";
+    divAirCondition.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
+    div3dayForecast.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
+    divPreviousWeather.style.backgroundColor = "rgba(17, 16, 16, 0.249)";
+    divPastdataHead.style.backgroundColor = "rgba(217, 217, 217, 0.3)";
+  }
+}
+
+
+
