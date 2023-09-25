@@ -1,8 +1,23 @@
 body{
-    background-image: url(/assets/brandon-morgan-3qucB7U2l7I-unsplash.jpg);
+    background-image: url(/assets/darkmode.jpg);
     
 }
 
+.lbl-theme{
+    background-color: #ECD8D8;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 2vw;
+}
+
+.modechanger-img{
+    width: 3vw;
+    height: 3vw;
+}
+/* .lbl-theme img{
+    width: 3vw;
+    height: 3vw;
+} */
 
 .div-search{
     position: relative;
@@ -39,21 +54,11 @@ body{
 }
 
 .current-weather{
-    /* display: flex;
-    flex-direction: row;
-    width: 40%;
-    background-color: #d1d8e0;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border-radius: 2vh;
-    opacity: 0.5;
-    font-size: xx-large; */
     display: flex;
     flex-direction: row;
     position: absolute;
     width: 40vw;
-    height: 35vh;
+    height: 20vw;
     left: 3vw;
     top: 25vh;
 
@@ -97,30 +102,20 @@ body{
 }
 
 .date-container-day{
-    /* margin-top: 5%;
-    margin-left: 20%;
-    font-size: 150%;
-    font-weight: 600; */
     font-size: 1.5vw;
     margin-top: 1vw;
 }
 
 .date-container-date{
-    /* margin-top: 0%;
-    margin-left: 20%; */
     font-size: 1vw;
 }
 
 .live-time{
-    /* margin-left: 20%;
-    font-size: 180%; */
     font-size: 2.5vw;
-    /* margin-left: 1vw; */
     margin-top: 0.5vw;
 }
 
 .div-current-condition{
-    /* background-color: aqua; */
     height: 100%;
     width: 45%;
 }
@@ -128,11 +123,9 @@ body{
 .div-current-icon{
     margin-top: 0.5vw;
     margin-left: 4vw;
-    /* background-color: blue; */
 }
 
 .current-icon{
-    /* background-color: aqua; */
    height: 6vw;
    width: 6vw;
 }
@@ -140,7 +133,6 @@ body{
 .current-temp{
     margin-left: 4vw;
     font-size: 4vw;
-    /* background-color: bisque; */
 }
 .current-weather-condition{
     font-size: 1.5vw;
@@ -148,19 +140,11 @@ body{
 }
 
 .map-frame{
-    /* position: relative;
-    height: 40vh;
-    width: 40%;
-    margin-left: 5%;
-    margin-top: 0%;
-    border-radius: 20px; */
-    /* Rectangle 5 */
-
     position: relative;
     width: 40vw;
-    height: 35vh;
+    height: 15vw;
     left: 3vw;
-    top: 20vw;
+    top: 22vw;
     border-radius: 20px;
 
 }
@@ -345,7 +329,7 @@ hr{
 
 
 .div-previous-weather{
-    background-color: rgba(17, 16, 16, 0.249);
+    background-color: rgba(17, 16, 16, 0.31);
     height: 15vw;
     width: 10vw;
     border-radius: 2vw;
@@ -394,6 +378,69 @@ hr{
 
 
 
+/*History Weather DIV*/
+
+.div-weather-history{
+    width: 80%;
+    height: 20vw;
+    /* background-color: aqua; */
+    margin-left: 10%;
+    margin-top: 5%;
+    color: #fff;
+    /* border-radius: 2vw; */
+    background: #00000088;
+    mix-blend-mode: normal;
+    border-radius: 20px;    
+    display: flex;
+    flex-direction: row;
+}
+
+.weather-history-date{
+    /* background-color: #292424; */
+    height: 20vw;
+    width: 35%;
+    margin: 2vw;
+    margin-top: 2vw;
+}
+
+.weather-history-detail{
+    /* background-color: aqua; */
+    width: 70%;
+    display: inline-flex;
+    padding: 1vw;
+
+}
+
+.lbl-date-pick{
+    font-size: 2vw;
+}
+
+.date-picker{
+    width: 20vw;
+    height: 3vw;
+    padding: 1vw;
+    border-radius: 2vw;
+    margin-top: 2vw;
+
+}
+
+.history-detail-table{
+    padding: 2vw;
+}
+
+table{
+    margin-left: 2vw;
+    font-weight: 500;
+    border-radius: 2vw;
+    font-size: 1vw;
+}
+
+td{
+    width: 20vw;
+    text-align: left;
+    padding: 0.5vw;
+    }
+
 /* Pricing div CSS */
 
 .div-pricing{
@@ -402,7 +449,8 @@ hr{
 }
 
 .div-pricing-heading{
-    color: #fff;
+    color: #292424;
+    font-weight: 700;
     font-size: 2.5vw;
     margin-left: 36vw;
     margin-right: 36vw;
@@ -437,6 +485,7 @@ hr{
     margin-left: 1vw;
     font-size: 1vw;
     text-align: left;
+    margin-top: 1vw;
 }
 
 .pricing-btn{
@@ -446,6 +495,7 @@ hr{
     margin-left: 6vw;
     margin-right: 6vw;
     background: #D9D9D9;
+    font-size: 1vw;
 }
 
 .pricing-plan-name{
@@ -466,7 +516,7 @@ hr{
     font-size: 2vw;
     text-align: center;
     width: 20vw;
-    margin-bottom: 1vw;
+    margin-top: 0vw;
 }
 .class-fee-month{
     font-size: 1vw;

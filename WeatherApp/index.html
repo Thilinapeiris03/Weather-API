@@ -7,21 +7,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/toggle.css"> -->
 </head>
-<body class="body-img-trans">
+<body id="body" class="body-img-trans">
     <!-- Navbar code -->
-    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar sticky-top navbar-dark bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="/assets/AccuweatherConnect logo.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
-            Accuweather Connect
-          </a>
-          <div class="switch">
-            <label>
-            <!-- <input type="checkbox" data-toggle="toggle" checked data-size="sm">
-            <span class="check"></span> -->
-            </label>
+            <a class="navbar-brand" href="#">
+                <img src="/assets/AccuweatherConnect logo.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+                Accuweather Connect
+            </a>
+            <div class="switch">
+                <img class="modechanger-img" id="theme-mode-img" src="/assets/icons/brightness.png" alt="">
             </div>
+        </div>
     </nav>
     <!-- Navbar code end-->
 
@@ -34,7 +33,7 @@
     </div>
     <div class="main-vison">
         <div class="div-div">
-            <div class="current-weather">
+            <div id="current-location" class="current-weather">
                 <div>
                     <div class="display-div-location">
                         <div class="div-location-img">
@@ -65,7 +64,7 @@
             </div>
         </div>
         <div class="div-condition-and-forecast">
-            <div class="div-aircondition">
+            <div id="div-aircondition" class="div-aircondition">
                 <div class="condition-heading">
                     Condition
                     <hr>
@@ -108,7 +107,7 @@
                 
     
             </div>
-            <div class="div-3dayforecast">
+            <div id="div-3dayforecast" class="div-3dayforecast">
                 <div class="div-forecast-heading">
                     3 Day Forecast
                 </div>
@@ -156,11 +155,11 @@
 
     <!-- Previous weather data -->
     <div class="div-day7-pastdata">
-        <div class="day7-pastdata-heading">
+        <div id="day7-pastdata-heading" class="day7-pastdata-heading">
             <label class="lbl-day7-pastdata-heading" for="">Previous Weather Summary</label>
         </div>
         <div class="day7-pastdata-details">
-            <div class="div-previous-weather">
+            <div id="div-previous-weather" class="div-previous-weather">
                 <div class="div-day7-pastdata-detail">
                     <label class="day7-pastdata-lbldate">29/23</label>
                     <label class="day7-pastdata-lbldate">Sun</label>
@@ -242,6 +241,64 @@
         </div>
     </div>
     <!-- Previous weather data end-->
+
+    <!-- History Data Selector -->
+    <div class="div-weather-history">
+        <div class="weather-history-date">
+            <br>
+            <label class="lbl-date-pick">Select the Date </label>
+            <br>
+            <input class="date-picker" type="date" name="" id="">
+        </div>
+        <div class="weather-history-detail">
+            <table>
+                <tr>
+                    <td>Temperature &emsp;&ensp;&emsp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Wind speed &emsp;&ensp;&emsp;&nbsp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Precipitation &emsp;&emsp;&ensp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Humidity &emsp;&emsp;&emsp;&emsp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>UV Index &emsp;&emsp;&emsp;&emsp;:</td>
+                    <td></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>Sun Rise &emsp;&emsp;&emsp;&emsp;&ensp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sunset &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Weather condition&ensp;:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>W</td>
+                    <td></td>
+                </tr>
+                
+            </table>
+
+        </div>
+
+    </div>
+    <!-- History Data Selector End -->
+
+    
 
     <!-- Pricing -->
     <div class="div-pricing">
@@ -345,7 +402,8 @@
 
         </div>
     </div>
-      <script src="/script/index.js"></script>
+    <script src="/script/index.js"></script>
+    <script src="/script/apiconnect.js"></script>
    
 </body>
 </html>
