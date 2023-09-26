@@ -290,22 +290,24 @@ hr{
 
 .forecast-datail-date{
     margin-top: 2vw;
-    margin-left: 1vw;
-    font-size: 1.5vw;
+    margin-left: 0.5vw;
+    font-size: 1.3vw;
+    /* background-color: aqua; */
+    width: 8vw;
 }
 
 .forecast-img{
     width: 7vw;
     height: 7vw;
-    margin-left: 3.5vw;
+    margin-left: 0vw;
     margin-top: 0.5vw;
 }
 
 .forecast-condition{
     width: 5.5vw;
     height: 2vw;
-    font-size: 1.5vw;
-    margin-left: 1.5vw;
+    font-size: 1.2vw;
+    margin-left: 0.5vw;
     margin-top: 2.5vw;
     text-align: end;
 }
@@ -352,7 +354,7 @@ hr{
 
 .div-previous-weather{
     background-color: rgba(17, 16, 16, 0.31);
-    height: 15vw;
+    height: 18vw;
     width: 10vw;
     border-radius: 2vw;
     margin-top: 1vw;
@@ -370,6 +372,7 @@ hr{
 .day7-pastdata-lbldate{
     text-align: center;
     font-size: 1.2vw;
+    margin-top: 0.5vw;
 }
 
 
