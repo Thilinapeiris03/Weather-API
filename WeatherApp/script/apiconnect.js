@@ -27,6 +27,7 @@ const forecastDay3Img = $("#forecast-day3-image");
 
 const dayString = new Date().getDay();
 const dayArray =["Sun","Mon","Tue","Wed","Thu","Fri","Sat","Sun","Mon","Tue"];
+const dayArrayReverse =["Sun","Sat","Fri","Thu","Wed","Tue","Mon","Sun","Sat","Fri","Thu","Wed","Tue"];
 
 var last7history = Last7Days();
 console.log(last7history);
@@ -37,7 +38,7 @@ const pastdataDay5 = $("#pastdata-day5");
 const pastdataDay4 = $("#pastdata-day4");
 const pastdataDay3 = $("#pastdata-day3");
 const pastdataDay2 = $("#pastdata-day2");
-const pastdataDay1 = $("#pastdata-day1");
+// const pastdataDay1 = $("#pastdata-day1");
 
 const pastdataDay7Day = $("#pastdata-day7-day");
 const pastdataDay6Day = $("#pastdata-day6-day");
@@ -45,7 +46,7 @@ const pastdataDay5Day = $("#pastdata-day5-day");
 const pastdataDay4Day = $("#pastdata-day4-day");
 const pastdataDay3Day = $("#pastdata-day3-day");
 const pastdataDay2Day = $("#pastdata-day2-day");
-const pastdataDay1Day = $("#pastdata-day1-day");
+// const pastdataDay1Day = $("#pastdata-day1-day");
 
 const pastdataDay7Temp = $("#pastdata-day7-temp");
 const pastdataDay6Temp = $("#pastdata-day6-temp");
@@ -53,7 +54,7 @@ const pastdataDay5Temp = $("#pastdata-day5-temp");
 const pastdataDay4Temp = $("#pastdata-day4-temp");
 const pastdataDay3Temp = $("#pastdata-day3-temp");
 const pastdataDay2Temp = $("#pastdata-day2-temp");
-const pastdataDay1Temp = $("#pastdata-day1-temp");
+// const pastdataDay1Temp = $("#pastdata-day1-temp");
 
 
 const pastdataDay7Img = $("#patadata-day7-img");
@@ -62,7 +63,7 @@ const pastdataDay5Img = $("#patadata-day5-img");
 const pastdataDay4Img = $("#patadata-day4-img");
 const pastdataDay3Img = $("#patadata-day3-img");
 const pastdataDay2Img = $("#patadata-day2-img");
-const pastdataDay1Img = $("#patadata-day1-img");
+// const pastdataDay1Img = $("#patadata-day1-img");
 
 const pastdataDay7Condition = $("#pastdata-day7-condition");
 const pastdataDay6Condition = $("#pastdata-day6-condition");
@@ -70,7 +71,7 @@ const pastdataDay5Condition = $("#pastdata-day5-condition");
 const pastdataDay4Condition = $("#pastdata-day4-condition");
 const pastdataDay3Condition = $("#pastdata-day3-condition");
 const pastdataDay2Condition = $("#pastdata-day2-condition");
-const pastdataDay1Condition = $("#pastdata-day1-condition");
+// const pastdataDay1Condition = $("#pastdata-day1-condition");
 
 const abc= $("#abcdefg");
 
@@ -110,6 +111,7 @@ function searchBtnOnClick(){
         url : `http://api.weatherapi.com/v1/forecast.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&days=4`,
         success : (resp) => {
             // console.log(resp);
+            
             forecastDay1date.text(resp.forecast.forecastday[1].date)
             forecastDay2date.text(resp.forecast.forecastday[2].date)
             forecastDay3date.text(resp.forecast.forecastday[3].date)
@@ -128,90 +130,96 @@ function searchBtnOnClick(){
         }
     })
 
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result1}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay1.text(resp.forecast.forecastday[0].date)
-            pastdataDay1Day.text(dayArray[dayString])
-            pastdataDay1Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay1Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay1Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result2}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay2.text(resp.forecast.forecastday[0].date)
-            pastdataDay2Day.text(dayArray[dayString+1])
-            pastdataDay2Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay2Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay2Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result3}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay3.text(resp.forecast.forecastday[0].date)
-            pastdataDay3Day.text(dayArray[dayString+2])
-            pastdataDay3Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay3Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay3Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result4}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay4.text(resp.forecast.forecastday[0].date)
-            pastdataDay4Day.text(dayArray[dayString+3])
-            pastdataDay4Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay4Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay4Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result5}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay5.text(resp.forecast.forecastday[0].date)
-            pastdataDay5Day.text(dayArray[dayString+4])
-            pastdataDay5Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay5Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay5Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result6}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay6.text(resp.forecast.forecastday[0].date)
-            pastdataDay6Day.text(dayArray[dayString+5])
-            pastdataDay6Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay6Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay6Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
-    $.ajax({
-        method : "GET",
-        url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result7}`,
-        success : (resp) => {
-            // console.log(resp);
-            pastdataDay7.text(resp.forecast.forecastday[0].date)
-            pastdataDay7Day.text(dayArray[dayString+6])
-            pastdataDay7Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
-            pastdataDay7Condition.text(resp.forecast.forecastday[0].day.condition.text)
-            pastdataDay7Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
-        }
-    })
+    for (let i = 1; i < 8; i++) {
+        $.ajax({
+            method : "GET",
+            url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history[i]}`,
+            success : (resp) => {
+                // console.log(resp);
+                $("#pastdata-day"+i).text(resp.forecast.forecastday[0].date)
+                $("#pastdata-day"+i+"-day").text(dayArrayReverse[dayString+(i+1)])
+                // console.log(dayArrayReverse[dayString+(i+1)]);
+                // console.log(last7history);
+                $("#patadata-day"+i+"-img").attr("src",resp.forecast.forecastday[0].day.condition.icon)
+                $("#pastdata-day"+i+"-condition").text(resp.forecast.forecastday[0].day.condition.text)
+                $("#pastdata-day"+i+"-temp").text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+            }
+        })
+    }
+
+    
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result2}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay2.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay2Day.text(dayArray[dayString+1])
+    //         pastdataDay2Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay2Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay2Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result3}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay3.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay3Day.text(dayArray[dayString+2])
+    //         pastdataDay3Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay3Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay3Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result4}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay4.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay4Day.text(dayArray[dayString+3])
+    //         pastdataDay4Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay4Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay4Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result5}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay5.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay5Day.text(dayArray[dayString+4])
+    //         pastdataDay5Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay5Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay5Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result6}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay6.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay6Day.text(dayArray[dayString+5])
+    //         pastdataDay6Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay6Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay6Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
+    // $.ajax({
+    //     method : "GET",
+    //     url : `http://api.weatherapi.com/v1/history.json?key=58b3a31e66174a62ac525133232609&q=${searchName.value}&dt=${last7history.result7}`,
+    //     success : (resp) => {
+    //         // console.log(resp);
+    //         pastdataDay7.text(resp.forecast.forecastday[0].date)
+    //         pastdataDay7Day.text(dayArray[dayString+6])
+    //         pastdataDay7Img.attr("src",resp.forecast.forecastday[0].day.condition.icon)
+    //         pastdataDay7Condition.text(resp.forecast.forecastday[0].day.condition.text)
+    //         pastdataDay7Temp.text(resp.forecast.forecastday[0].day.avgtemp_c+"℃")
+    //     }
+    // })
 }
 
 function Last7Days () {
@@ -233,16 +241,7 @@ function Last7Days () {
     sixDaysAgo.setDate(today.getDate() - 6);
     sevenDaysAgo.setDate(today.getDate() - 7);
 
-    var result0 = formatDate(today);
-    var result1 = formatDate(oneDayAgo);
-    var result2 = formatDate(twoDaysAgo);
-    var result3 = formatDate(threeDaysAgo);
-    var result4 = formatDate(fourDaysAgo);
-    var result5 = formatDate(fiveDaysAgo);
-    var result6 = formatDate(sixDaysAgo);
-    var result7 = formatDate(sevenDaysAgo);
-
-    var result = {result0,result1,result2,result3,result4,result5,result6,result7};
+    var result = [formatDate(today),formatDate(oneDayAgo),formatDate(twoDaysAgo),formatDate(threeDaysAgo),formatDate(fourDaysAgo),formatDate(fiveDaysAgo),formatDate(sixDaysAgo),formatDate(sevenDaysAgo)];
     // var result = result0+","+result1+","+result2+","+result3+","+result4+","+result5+","+result6+","+result7;
     // console.log(result);
     return(result);
