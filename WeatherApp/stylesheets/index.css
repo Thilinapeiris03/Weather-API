@@ -20,24 +20,28 @@ body{
 } */
 
 .div-search{
+    /* background-color: aqua; */
     position: relative;
-    margin-top: 2%;
-    margin-left: 30%;
+    /* margin-top: 2vw; */
+    margin-left: 10vw;
+    width: 50vw;
+    /* padding: 2vw; */
 }
 
 .input-search{
     border-radius: 1vh;
-    height: 35%;
+    height: 40%;
     width: 60%;
     opacity: 0.3;
     color: black;
     font-size: larger;
     font-weight: 800;
+    margin-top: 2vw;
 }
 
 .btn-search{
     border-radius: 2vh;
-    height: 25%;
+    height: 40%;
     width: 15%;
     background-color: #d1d8e0;
     opacity: 0.7;
@@ -51,6 +55,12 @@ body{
 .main-vison{
     display: flex;
     flex-direction: row;
+}
+
+.time-search-bar{
+    margin-left: 2vw;
+    /* background-color: #D9D9D9; */
+    display: flex;
 }
 
 .current-weather{
@@ -89,6 +99,7 @@ body{
 .div-lbl-city{
     width: 15vw;
     height: 10vh;
+    /* background-color: #d1d8e0; */
 }
 .lbl-city{
     font-size: 2vw;
@@ -98,21 +109,32 @@ body{
 .div-date-details{
     display: flex;
     flex-direction: column;
-    margin-left: 3vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    /* background-color: #d1d8e0; */
+    height: 10vw;
+    /* font-size: 5vw; */
 }
 
 .date-container-day{
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     margin-top: 1vw;
 }
 
 .date-container-date{
-    font-size: 1vw;
+    font-size: 1.8vw;
 }
 
 .live-time{
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     margin-top: 0.5vw;
+    color: #fff;
+    position: relative;
+    margin-left: 1vw;
+}
+
+.live-time-time{
+    font-size: 2vw ;
 }
 
 .div-current-condition{
@@ -268,22 +290,24 @@ hr{
 
 .forecast-datail-date{
     margin-top: 2vw;
-    margin-left: 1vw;
-    font-size: 1.5vw;
+    margin-left: 0.5vw;
+    font-size: 1.3vw;
+    /* background-color: aqua; */
+    width: 8vw;
 }
 
 .forecast-img{
     width: 7vw;
     height: 7vw;
-    margin-left: 3.5vw;
+    margin-left: 0vw;
     margin-top: 0.5vw;
 }
 
 .forecast-condition{
     width: 5.5vw;
     height: 2vw;
-    font-size: 1.5vw;
-    margin-left: 1.5vw;
+    font-size: 1.2vw;
+    margin-left: 0.5vw;
     margin-top: 2.5vw;
     text-align: end;
 }
@@ -330,7 +354,7 @@ hr{
 
 .div-previous-weather{
     background-color: rgba(17, 16, 16, 0.31);
-    height: 15vw;
+    height: 18vw;
     width: 10vw;
     border-radius: 2vw;
     margin-top: 1vw;
@@ -348,6 +372,7 @@ hr{
 .day7-pastdata-lbldate{
     text-align: center;
     font-size: 1.2vw;
+    margin-top: 0.5vw;
 }
 
 
