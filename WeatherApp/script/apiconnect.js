@@ -61,6 +61,7 @@ function searchBtnOnClick(){
             uv.text(resp.current.uv)
             precipitation.text(resp.current.precip_mm+" mm")
             curentImg.attr("src",resp.current.condition.icon) 
+            myMap(resp);
         }
     });
     
@@ -145,3 +146,23 @@ function formatDate(date){
     date = yyyy+'-'+mm+'-'+dd;
     return date
  }
+
+
+function myMap(data) {
+    // console.log(data);
+    let lati = data.location.lat;
+    let lon = data.location.lon;
+    // console.log(data.location.lon);
+    // console.log(data.location.lat);
+    let mapProp = {
+      center: new google.maps.LatLng(lati, lon),
+      zoom: 20,
+    };
+  
+    let map = new google.maps.Map(document.getElementById("map"), mapProp);
+    let marker = new google.maps.Marker({
+      position: new google.maps.LatLng(lati, lon),
+      map: map,
+      title: data.location.name,
+    });
+}

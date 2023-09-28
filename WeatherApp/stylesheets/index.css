@@ -22,7 +22,7 @@ body{
 .div-search{
     /* background-color: aqua; */
     position: relative;
-    /* margin-top: 2vw; */
+    margin-top: 0.1vw;
     margin-left: 10vw;
     width: 50vw;
     /* padding: 2vw; */
@@ -30,7 +30,7 @@ body{
 
 .input-search{
     border-radius: 1vh;
-    height: 40%;
+    height: auto;
     width: 60%;
     opacity: 0.3;
     color: black;
@@ -41,7 +41,7 @@ body{
 
 .btn-search{
     border-radius: 2vh;
-    height: 40%;
+    height: auto;
     width: 15%;
     background-color: #d1d8e0;
     opacity: 0.7;
@@ -66,11 +66,11 @@ body{
 .current-weather{
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: relative;
     width: 40vw;
     height: 20vw;
     left: 3vw;
-    top: 25vh;
+    top: 5vh;
 
     background: rgba(2, 6, 37, 0.452);
     box-shadow: 5px 10px 8px #888888 ;
@@ -107,10 +107,11 @@ body{
 }
 
 .div-date-details{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-left: 2vw;
-    margin-top: 2vw;
+    margin-top: 5vw;
     /* background-color: #d1d8e0; */
     height: 10vw;
     /* font-size: 5vw; */
@@ -166,7 +167,7 @@ body{
     width: 40vw;
     height: 15vw;
     left: 3vw;
-    top: 22vw;
+    margin-top: 5vw;
     border-radius: 20px;
 
 }
@@ -174,6 +175,8 @@ body{
 .div-condition-and-forecast{
     display: flex;
     flex-direction: row;
+    /* background-color: #dadce0; */
+    margin-left: 5vw;
 }
 
 .div-aircondition{
@@ -186,7 +189,7 @@ body{
     position: relative;
     width: 25vw;
     height: 34vw;
-    left: 5vw;
+    margin-left: 0.5vw;
     top: 5vh;
 
     background: rgba(217, 217, 217, 0.18);
@@ -202,7 +205,7 @@ body{
 position: relative;
 width: 25vw;
 height: 34vw;
-left: 7vw;
+margin-left: 2vw;
 top: 5vh;
 
 background: rgba(217, 217, 217, 0.18);
@@ -326,7 +329,7 @@ hr{
 
 .day7-pastdata-heading{
     width: 90vw;
-    height: 2.5vw;
+    height: auto;
     background-color: rgba(217, 217, 217, 0.3);
     margin-left: 6vw;
     margin-right: 6vw;
@@ -464,7 +467,7 @@ td{
     width: 20vw;
     text-align: left;
     padding: 0.5vw;
-    }
+}
 
 /* Pricing div CSS */
 
@@ -545,4 +548,651 @@ td{
 }
 .class-fee-month{
     font-size: 1vw;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+   body{
+    /* background-image: url(/assets/lightmode.jpg); */
+   }
+   .main-vison{
+    /* flex-direction: column; */
+   }
+   .btn-search {
+    border-radius: 2vw;
+    width: 20%;
+    height: auto;
+    /* background-color: #d1d8e0; */
+    opacity: 0.7;
+    }
+    .input-search{
+        height: auto;
+    }
+
+    .live-time{
+        font-size: 3vw;
+    }
+    .live-time-time{
+        font-size: 3vw;
+    }
+    .div-date-details{
+        margin-top: 3vw;
+    }
+    .lbl-city{
+        font-size: 1.8vw;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+   .btn-search {
+    height: auto;
+    }
+    .input-search{
+        height: auto;
+    }
+
+    .live-time{
+        font-size: 3vw;
+    }
+    .live-time-time{
+        font-size: 3vw;
+    }
+    .div-date-details{
+        margin-top: 2vw;
+    }
+    .lbl-city{
+        font-size: 1.5vw;
+    }
+    .condition-heading{
+        color: #fff;
+        font-size: 2vw;
+        height: 4vw;
+    }
+    .condition-descrip{
+        font-size: 1.5vw;
+    }
+    .lbl-day7-pastdata-heading{
+        font-size: 2vw;
+        
+    }
+    .current-weather{
+        border-radius: 2vw;
+    }
+    .div-3dayforecast{
+        border-radius: 2vw;
+    }
+    .div-aircondition{
+        border-radius: 2vw;
+    }
+    table{
+        font-size: 1.1vw;
+    }
+    .location-img{
+        /* background-color: #d1d8e0; */
+        margin-top: 2vw;
+        margin-left: 1vw;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .current-weather{
+       border-radius:2vw;
+    }
+    .modechanger-img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .div-aircondition{
+        border-radius:2vw;
+    }
+    .div-3dayforecast{
+        border-radius:2vw;
+    }
+    .btn-search {
+        height: 5vw;
+        width: 10vw;
+        font-size: 2.5vw;
+    }
+    .input-search{
+        margin-left: 1vw;
+        font-size: 2vw;
+        height: 5vw;
+        width: 35vw;
+    }
+
+    .live-time{
+        font-size: 2vw;
+    }
+    .live-time-time{
+        font-size: 2.5vw;
+    }
+    .div-date-details{
+        margin-top: 1vw;
+        font-size: 1.5vw;
+        /* background-color: #D9D9D9; */
+    }
+    .display-div-location{
+        height: 6vw;
+        width: 100%;
+        /* background-color: #d1d8e0; */
+    }
+    .div-lbl-city{
+        font-size: 1.5vw;
+    }
+    .lbl-city{
+        font-size: 2vw;
+    }
+    .condition-heading{
+        color: #fff;
+        font-size: 2vw;
+        height: 4vw;
+    }
+    .condition-descrip{
+        font-size: 1.5vw;
+    }
+    .lbl-day7-pastdata-heading{
+        font-size: 2vw;
+        
+    }
+    table{
+        font-size: 1.1vw;
+    }
+    .pricing-plan-name-detail{
+        margin-bottom: auto;
+    }
+    .date-picker{
+        font-size: 2vw;
+    }
+    .location-img{
+        /* background-color: #d1d8e0; */
+        margin-top: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-vison{
+        display: flex;
+        flex-direction: column;
+    }
+    .modechanger-img{
+        width: 6vw;
+        height: 6vw;
+    }
+    .div-div{
+        display: flex;
+        flex-direction: row;
+    }
+    .map-frame{
+        height: 23vw;
+        border-radius: 2vw;
+        width: 45%;
+        margin-left: 5%;
+        margin-top: 6vw;
+    }
+    .current-weather{
+       border-radius:2vw;
+       width: 45%;
+       height: 23vw;
+    }
+    .div-condition-and-forecast{
+        /* background-color: aqua; */
+        margin-top: 0vw;
+
+    }
+    .div-aircondition{
+        border-radius:2vw;
+        margin-top: 0vw;
+        margin-left: 5vw;
+        width: 35vw;
+        height: 40vw;
+       
+    }
+    .div-3dayforecast{
+        border-radius:2vw;
+        margin-left: 10vw;
+        width: 35vw;
+        height: 40vw;
+    }
+    .div-forecast-heading{
+        width: 30vw;
+    }
+    .forecast-details{
+        width: 33vw;
+        height: 10vw;
+    }
+    .forecast-datail-date{
+        width: 12vw;
+        font-size: 1.5vw;
+        /* background-color: #d1d8e0; */
+    }
+    .forecast-img{
+        width: 9vw;
+        height: 9vw;
+    }
+    .forecast-condition{
+        width: 10vw;
+        font-size: 1.7vw;
+    }
+    .btn-search {
+        height: 5vw;
+        width: 10vw;
+        font-size: 2.5vw;
+    }
+    .input-search{
+        margin-left: 1vw;
+        font-size: 2vw;
+        height: 5vw;
+        width: 35vw;
+    }
+
+    .live-time{
+        font-size: 2vw;
+    }
+    .live-time-time{
+        font-size: 2.5vw;
+    }
+    .div-date-details{
+        margin-top: 1vw;
+        font-size: 1.5vw;
+        /* background-color: #D9D9D9; */
+    }
+    .display-div-location{
+        height: 6vw;
+        width: 20vw;
+        /* background-color: #d1d8e0; */
+    }
+    .div-lbl-city{
+        font-size: 1.5vw;
+        width: 20vw;
+    }
+    .lbl-city{
+        font-size: 2vw;
+    }
+    .condition-heading{
+        color: #fff;
+        font-size: 2vw;
+        height: 8vw;
+    }
+    .condition-descrip{
+        font-size: 2vw;
+        width: 20vw;
+        height: 1vw;
+    }
+    .lbl-day7-pastdata-heading{
+        font-size: 2vw;
+        
+    }
+    table{
+        font-size: 1.1vw;
+    }
+    .pricing-plan{
+        height: 31vw;
+        border-radius: 2vw;
+    }
+    .pricing-plan-name-detail{
+        margin-bottom: auto;
+    }
+    .date-picker{
+        font-size: 2vw;
+    }
+    .div-day7-pastdata{
+        margin-top: 10vw;
+    }
+    .day7-pastdata-details{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    .lbl-date-pick{
+        /* background-color: #DDCECE; */
+        margin-top: 2vw;
+    }
+    .weather-history-date{
+        /* background-color: aqua; */
+        height: 10vw
+    }
+    .div-weather-history{
+        height: 25vw;
+        border-radius: 2vw;
+    }
+    .location-img{
+        /* background-color: #d1d8e0; */
+        margin-top: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-vison{
+        display: flex;
+        flex-direction: column;
+    }
+    .modechanger-img{
+        width: 7vw;
+        height: 7vw;
+    }
+    .div-div{
+        display: flex;
+        flex-direction: row;
+    }
+    .map-frame{
+        height: 23vw;
+        border-radius: 2vw;
+        width: 45%;
+        margin-left: 5%;
+        margin-top: 6vw;
+    }
+    .current-weather{
+       border-radius:2vw;
+       width: 45%;
+       height: 23vw;
+    }
+    .div-condition-and-forecast{
+        /* background-color: aqua; */
+        margin-top: 0vw;
+
+    }
+    .div-aircondition{
+        border-radius:2vw;
+        margin-top: 0vw;
+        margin-left: 5vw;
+        width: 35vw;
+        height: 40vw;
+       
+    }
+    .div-3dayforecast{
+        border-radius:2vw;
+        margin-left: 10vw;
+        width: 35vw;
+        height: 40vw;
+    }
+    .div-forecast-heading{
+        width: 30vw;
+    }
+    .forecast-details{
+        width: 33vw;
+        height: 10vw;
+    }
+    .forecast-datail-date{
+        width: 12vw;
+        font-size: 1.5vw;
+        /* background-color: #d1d8e0; */
+    }
+    .forecast-img{
+        width: 9vw;
+        height: 9vw;
+    }
+    .forecast-condition{
+        width: 10vw;
+        font-size: 1.7vw;
+    }
+    .btn-search {
+        height: 5vw;
+        width: 10vw;
+        font-size: 2.5vw;
+    }
+    .input-search{
+        margin-left: 1vw;
+        font-size: 2vw;
+        height: 5vw;
+        width: 35vw;
+    }
+
+    .live-time{
+        font-size: 2vw;
+    }
+    .live-time-time{
+        font-size: 2.5vw;
+    }
+    .div-date-details{
+        margin-top: 1vw;
+        font-size: 1.5vw;
+        /* background-color: #D9D9D9; */
+    }
+    .display-div-location{
+        height: 6vw;
+        width: 20vw;
+        /* background-color: #d1d8e0; */
+    }
+    .div-lbl-city{
+        font-size: 1.5vw;
+        width: 20vw;
+    }
+    .lbl-city{
+        font-size: 2vw;
+    }
+    .condition-heading{
+        color: #fff;
+        font-size: 2vw;
+        height: 8vw;
+    }
+    .condition-descrip{
+        font-size: 2vw;
+        width: 20vw;
+        height: 1vw;
+    }
+    .lbl-day7-pastdata-heading{
+        font-size: 2vw;
+        
+    }
+    table{
+        font-size: 1.1vw;
+    }
+    .pricing-plan{
+        height: 35vw;
+        border-radius: 2vw;
+    }
+    .pricing-plan-name-detail{
+        margin-bottom: auto;
+    }
+    .date-picker{
+        font-size: 2vw;
+    }
+    .div-day7-pastdata{
+        margin-top: 10vw;
+    }
+    .day7-pastdata-details{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    .lbl-date-pick{
+        /* background-color: #DDCECE; */
+        margin-top: 2vw;
+    }
+    .weather-history-date{
+        /* background-color: aqua; */
+        height: 10vw
+    }
+    .div-weather-history{
+        height: 27vw;
+        border-radius: 2vw;
+    }
+    .div-location-img{
+        /* background-color: #d1d8e0; */
+    }
+    .location-img{
+        /* background-color: #d1d8e0; */
+        margin-top: auto;
+        margin-left: auto;
+    }
+    .day7-pastdata-heading{
+        height: 5vw;
+        margin-top: 2vw;
+    }
+    .lbl-day7-pastdata-heading{
+        margin-top: auto;
+        font-size: 2.5vw;
+    }
+}
+@media screen and (max-width: 320px) {
+    .main-vison{
+        display: flex;
+        flex-direction: column;
+    }
+    .modechanger-img{
+        width: 8vw;
+        height: 8vw;
+    }
+    .div-div{
+        display: flex;
+        flex-direction: row;
+    }
+    .map-frame{
+        height: 23vw;
+        border-radius: 2vw;
+        width: 45%;
+        margin-left: 5%;
+        margin-top: 6vw;
+    }
+    .current-weather{
+       border-radius:2vw;
+       width: 45%;
+       height: 23vw;
+    }
+    .div-condition-and-forecast{
+        /* background-color: aqua; */
+        margin-top: 0vw;
+
+    }
+    .div-aircondition{
+        border-radius:2vw;
+        margin-top: 0vw;
+        margin-left: 5vw;
+        width: 35vw;
+        height: 40vw;
+       
+    }
+    .div-3dayforecast{
+        border-radius:2vw;
+        margin-left: 10vw;
+        width: 35vw;
+        height: 40vw;
+    }
+    .div-forecast-heading{
+        width: 30vw;
+    }
+    .forecast-details{
+        width: 33vw;
+        height: 10vw;
+    }
+    .forecast-datail-date{
+        width: 12vw;
+        font-size: 1.5vw;
+        /* background-color: #d1d8e0; */
+    }
+    .forecast-img{
+        width: 9vw;
+        height: 9vw;
+    }
+    .forecast-condition{
+        width: 10vw;
+        font-size: 1.7vw;
+    }
+    .btn-search {
+        height: 5vw;
+        width: 10vw;
+        font-size: 2.5vw;
+    }
+    .input-search{
+        margin-left: 1vw;
+        font-size: 2vw;
+        height: 5vw;
+        width: 35vw;
+    }
+
+    .live-time{
+        font-size: 2vw;
+    }
+    .live-time-time{
+        font-size: 2.5vw;
+    }
+    .div-date-details{
+        margin-top: 1vw;
+        font-size: 1.5vw;
+        /* background-color: #D9D9D9; */
+    }
+    .display-div-location{
+        height: 6vw;
+        width: 20vw;
+        /* background-color: #d1d8e0; */
+    }
+    .div-lbl-city{
+        font-size: 1.5vw;
+        width: 20vw;
+    }
+    .lbl-city{
+        font-size: 2vw;
+    }
+    .condition-heading{
+        color: #fff;
+        font-size: 2vw;
+        height: 8vw;
+    }
+    .condition-descrip{
+        font-size: 2vw;
+        width: 20vw;
+        height: 1vw;
+    }
+    .lbl-day7-pastdata-heading{
+        font-size: 2vw;
+        
+    }
+    table{
+        font-size: 1.1vw;
+    }
+    .pricing-plan{
+        height: 37vw;
+        border-radius: 2vw;
+    }
+    .pricing-plan-name-detail{
+        margin-bottom: auto;
+    }
+    .pricing-btn{
+        width: auto;
+    }
+    .date-picker{
+        font-size: 2vw;
+    }
+    .div-day7-pastdata{
+        margin-top: 10vw;
+    }
+    .day7-pastdata-details{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    .lbl-date-pick{
+        /* background-color: #DDCECE; */
+        margin-top: 2vw;
+    }
+    .weather-history-date{
+        /* background-color: aqua; */
+        height: 10vw
+    }
+    .div-weather-history{
+        height: 30vw;
+        border-radius: 2vw;
+    }
+    .div-location-img{
+        /* background-color: #d1d8e0; */
+    }
+    .location-img{
+        /* background-color: #d1d8e0; */
+        margin-top: auto;
+        margin-left: auto;
+    }
+    .day7-pastdata-heading{
+        height: 7vw;
+        margin-top: 5vw;
+    }
+    .lbl-day7-pastdata-heading{
+        margin-top: auto;
+        font-size: 2.5vw;
+    }
 }
