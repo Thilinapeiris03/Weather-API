@@ -29,7 +29,7 @@
     <!-- Main viewport -->
 
     <div class="time-search-bar">
-        <p  class="live-time">Local Time :&emsp;<label class="live-time-time" id="live-time"></label></p>
+        <p id="live-time-p" class="live-time">Local Time :&emsp;<label class="live-time-time" id="live-time"></label></p>
         <div class="div-search">
             <input class="input-search" type="search" name="search-txt" id="search-field" placeholder="Enter Location here" value="Colombo">
             <button class="btn-search" type="button" onclick="searchBtnOnClick()">Search</button>
@@ -50,7 +50,7 @@
                         </div>
                     </div> 
                     <div class="div-date-details">
-                        <br><br>
+                       
                         <p ><h2 class="date-container-day" id="live-day"></h2>
                         <h3 class="date-container-date"  id="date-container"></h3></p>
                         
@@ -66,8 +66,8 @@
                     <p id="current-weather-condition" class="current-weather-condition">Mostly Sunny</p>
                 </div>
             </div>
-            <div >
-                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2479019622015!2d80.43518747500141!3d7.437798892573101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae33998e0ef3519%3A0x160c2eb6aa08caec!2sICET%20Campus!5e0!3m2!1sen!2slk!4v1695292951101!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+            <div class="map-frame" id="map">
+                <!-- <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2479019622015!2d80.43518747500141!3d7.437798892573101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae33998e0ef3519%3A0x160c2eb6aa08caec!2sICET%20Campus!5e0!3m2!1sen!2slk!4v1695292951101!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     -->
             </div>
         </div>
         <div class="div-condition-and-forecast">
@@ -161,7 +161,7 @@
 
 
     <!-- Previous weather data -->
-    <div class="div-day7-pastdata">
+    <div id="past7days-id" class="div-day7-pastdata">
         <div id="day7-pastdata-heading" class="day7-pastdata-heading">
             <label class="lbl-day7-pastdata-heading" for="">Previous Weather Summary</label>
         </div>
@@ -404,7 +404,7 @@
             <h4>Contact us </h4>
             Name &emsp;&emsp; : <input class="contactus-text" type="text" name="" id=""><br><br>
             Email &ensp;&emsp;&emsp;: <input class="contactus-text" type="email" name="" id=""><br><br>
-            Message &emsp;: <textarea name="" id="" cols="60" rows="3" ></textarea><br>
+            Message &emsp;: <textarea name="" class="contactus-msg" cols="60" rows="3" ></textarea><br>
             <button class="btn-contactus-submit">Submit</button>
 
         </div>
@@ -412,6 +412,7 @@
     <script src="/script/index.js"></script>
     <script src="/script/apiconnect.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-   
+    <div class="map" id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1L2kgtpbmnNFFAc0NafEvSGUH9i40RlQ&libraries=places&callback=myMap"></script>
 </body>
 </html>

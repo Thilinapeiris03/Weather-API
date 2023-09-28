@@ -117,3 +117,63 @@ h3{
 .contactus-text{
     width: 30vw;
 }
+
+@media screen and (max-width: 1024px) {
+    .footer{
+        height: 22vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .footer{
+        height: 23vw;
+    }
+    .div-footer-details{
+        font-size: 1vw;
+    }
+}
+@media screen and (max-width:550px) {
+    .footer{
+        height: 30vw;
+    }
+    .footer-name{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:425px) {
+    .footer{
+        height: 30vw;
+        display: flexbox;
+    }
+    .div-footer-details{
+        font-size: 1vw;
+    }
+    .footer-contactus{
+        position: relative;
+        margin-top: 1vw;
+    }
+}
+@media screen and (max-width:375px) {
+    .footer{
+        height: 35vw;
+    }
+    .div-footer-details{
+        font-size: 1vw;
+    }
+    .footer-contactus{
+        position: relative;
+        margin-top: 1vw;
+    }
+}
+@media screen and (max-width:320px) {
+    .footer{
+        height: 40vw;
+    }
+    .div-footer-details{
+        font-size: 1vw;
+    }
+    .footer-contactus{
+        position: relative;
+        margin-top: 1vw;
+    }
+}

@@ -62,11 +62,14 @@ let divAirCondition = document.getElementById("div-aircondition");
 let div3dayForecast = document.getElementById("div-3dayforecast");
 let divPreviousWeather = document.getElementById("div-previous-weather");
 let divPastdataHead = document.getElementById("day7-pastdata-heading");
+let liveTime = document.getElementById("live-time-p");
 
 
 function themeChanger(){
   if(modeSelector%2==0){
     document.body.style.backgroundImage = "url('/assets/lightmode.jpg')";
+    // document.body.style.color= "#000";
+    liveTime.style.color = "#000";
     currentLocation.style.backgroundColor = "#34495e";
     divAirCondition.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
     div3dayForecast.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
@@ -74,6 +77,7 @@ function themeChanger(){
     divPastdataHead.style.backgroundColor = "rgba(38, 10, 10, 0.499)";
   }else{
     document.body.style.backgroundImage = "url('/assets/darkmode.jpg')";
+    liveTime.style.color = "#fff";
     currentLocation.style.backgroundColor = "rgba(2, 6, 37, 0.452)";
     divAirCondition.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
     div3dayForecast.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
