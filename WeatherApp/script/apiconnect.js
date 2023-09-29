@@ -156,7 +156,7 @@ function myMap(data) {
     // console.log(data.location.lat);
     let mapProp = {
       center: new google.maps.LatLng(lati, lon),
-      zoom: 20,
+      zoom: 10,
     };
   
     let map = new google.maps.Map(document.getElementById("map"), mapProp);
