@@ -118,6 +118,10 @@ h3{
     width: 30vw;
 }
 
+.footer-contact-head{
+    font-size: 2vw;
+}
+
 @media screen and (max-width: 1024px) {
     .footer{
         height: 22vw;
@@ -142,20 +146,27 @@ h3{
 }
 @media screen and (max-width:425px) {
     .footer{
-        height: 30vw;
-        display: flexbox;
+        height: 55vw;
+        display: flex;
+        flex-direction: column-reverse;  
     }
     .div-footer-details{
+        margin-left: 2vw;
         font-size: 1vw;
+        /* background-color: antiquewhite; */
+        width: 80%;
+        height: 12vw;
     }
     .footer-contactus{
         position: relative;
         margin-top: 1vw;
+        width: 80%;
+        /* background-color: aqua; */
     }
 }
 @media screen and (max-width:375px) {
     .footer{
-        height: 35vw;
+        height: 60vw;
     }
     .div-footer-details{
         font-size: 1vw;
@@ -167,13 +178,17 @@ h3{
 }
 @media screen and (max-width:320px) {
     .footer{
-        height: 40vw;
+        height: 55vw;
     }
     .div-footer-details{
         font-size: 1vw;
+        margin-top: 5vw;
     }
     .footer-contactus{
         position: relative;
         margin-top: 1vw;
+    }
+    .footer-contact-head{
+        font-size: 3vw;
     }
 }
